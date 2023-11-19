@@ -17,18 +17,12 @@
     "default_title": "Zybot",
     "default_popup": "popup.html"
   },
-  "permissions": [
-    "storage"
-  ],
+  "permissions": ["storage", "tabs", "activeTab"],
   "content_scripts": [
     {
-      "matches": [
-        "<all_urls>"
-      ],
+      "matches": ["<all_urls>"],
       "run_at": "document_idle",
-      "js": [
-        "contentScript.js"
-      ]
+      "js": ["contentScript.js"]
     }
   ]
 }
